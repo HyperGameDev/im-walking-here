@@ -1,0 +1,41 @@
+[gd_scene load_steps=13 format=3 uid="uid://cumfy0jt13tb5"]
+
+[ext_resource type="Script" uid="uid://ch1711yd56ko0" path="res://scripts/clickable.gd" id="1_8ekkt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ekkt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8inpy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_610a8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rd0by"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdl1i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xulvl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wcew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13f7h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5e2qw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1hax"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqnbd"]
+
+[node name="ClickableItem" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ekkt")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8inpy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_610a8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rd0by")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bdl1i")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_xulvl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7wcew")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_13f7h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5e2qw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_o1hax")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aqnbd")
+script = ExtResource("1_8ekkt")
