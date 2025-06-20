@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://cbmdcsvb41xin"]
+[gd_scene load_steps=3 format=3 uid="uid://cbmdcsvb41xin"]
+
+[sub_resource type="Gradient" id="Gradient_u8vuu"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3vyb7"]
+gradient = SubResource("Gradient_u8vuu")
+fill_to = Vector2(0, 1)
 
 [node name="Player" type="PathFollow2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_3vyb7")
