@@ -25,7 +25,7 @@ func _on_play_pressed() -> void:
 
 func _on_update_menu_state(state:menu_states) -> void:
 	menu_state = state
-	
+	print("MENU STATE: ",str(menu_states.keys()[menu_state]))
 	match menu_state:
 		menu_states.GAMEPLAY:
 			gameplay.visible = true
