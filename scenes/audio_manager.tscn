@@ -1,0 +1,70 @@
+[gd_scene load_steps=15 format=3 uid="uid://b7kdwxajdc2yh"]
+
+[ext_resource type="Script" uid="uid://biuqqh2pcyoeh" path="res://scripts/audio_manager.gd" id="1_8qd8g"]
+[ext_resource type="AudioStream" uid="uid://1oaxjd77f2e3" path="res://sound/01-DinosaurOne.wav" id="2_2y2jw"]
+[ext_resource type="AudioStream" uid="uid://b6kns43gfcoic" path="res://sound/02-DinosaurTwo.wav" id="3_2y5yn"]
+[ext_resource type="AudioStream" uid="uid://df01ik823kxcw" path="res://sound/03-DinosaurThree.wav" id="4_oucy0"]
+[ext_resource type="AudioStream" uid="uid://ugn7w8xwrgld" path="res://sound/04-DinosaurFour.wav" id="5_cuol6"]
+[ext_resource type="AudioStream" uid="uid://cavakrgnn0jqf" path="res://sound/05-DinosaurFive.wav" id="6_m1k83"]
+[ext_resource type="AudioStream" uid="uid://caih4ru335i5t" path="res://sound/06-DinosaurSix.wav" id="7_oummu"]
+[ext_resource type="AudioStream" uid="uid://bbffodslpeyhe" path="res://sound/BabyDinosaurFive.wav" id="8_hssp1"]
+[ext_resource type="AudioStream" uid="uid://dm48qellfpi17" path="res://sound/BabyDinosaurFour.wav" id="9_8b11i"]
+[ext_resource type="AudioStream" uid="uid://b1teusa4bmwb3" path="res://sound/BabyDinosaurOne.wav" id="10_u6qdm"]
+[ext_resource type="AudioStream" uid="uid://cie32pbsnb0qr" path="res://sound/BabyDinosaurSeven.wav" id="11_f6jxr"]
+[ext_resource type="AudioStream" uid="uid://d16t1vxr57wjf" path="res://sound/BabyDinosaurSix.wav" id="12_ovaav"]
+[ext_resource type="AudioStream" uid="uid://bvt8hwthbja65" path="res://sound/BabyDinosaurThree.wav" id="13_thanh"]
+[ext_resource type="AudioStream" uid="uid://bxo24q1tbquxm" path="res://sound/BabyDinosaurTwo.wav" id="14_nplbh"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_8qd8g")
+
+[node name="menu" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="menu"]
+
+[node name="game" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+
+[node name="bird" type="Node" parent="."]
+
+[node name="bird_noise" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("2_2y2jw")
+
+[node name="bird_noise2" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("3_2y5yn")
+
+[node name="bird_noise3" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("4_oucy0")
+
+[node name="bird_noise4" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("5_cuol6")
+
+[node name="bird_noise5" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("6_m1k83")
+
+[node name="bird_noise6" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("7_oummu")
+
+[node name="bird_noise7" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("8_hssp1")
+
+[node name="bird_noise8" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("9_8b11i")
+
+[node name="bird_noise9" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("10_u6qdm")
+
+[node name="bird_noise10" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("11_f6jxr")
+
+[node name="bird_noise11" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("12_ovaav")
+
+[node name="bird_noise12" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("13_thanh")
+
+[node name="bird_noise13" type="AudioStreamPlayer2D" parent="bird"]
+stream = ExtResource("14_nplbh")
+
+[node name="discord" type="Node" parent="."]

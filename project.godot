@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 SaveGame="*res://scenes/autosave/save_game.tscn"
 GameManager="*res://scenes/game_manager.tscn"
+AudioManager="*res://scenes/audio_manager.tscn"
 
 [debug]
 
