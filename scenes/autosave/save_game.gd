@@ -7,7 +7,7 @@ func _ready() -> void:
 	#save_game()
 	load_game()
 
-var Highscore : int = 0
+var Highscore : float = 0
 
 # I'm not sure why test3 is appended in the dict first, but it doesn't really matter if we access the information correctly
 func saveData() -> Dictionary:

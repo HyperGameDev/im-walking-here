@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 SaveGame="*res://scenes/autosave/save_game.tscn"
+GameManager="*res://scenes/game_manager.tscn"
 
 [debug]
 
