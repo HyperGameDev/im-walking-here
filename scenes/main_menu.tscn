@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx0jwniwoa425"]
+[gd_scene load_steps=6 format=3 uid="uid://bx0jwniwoa425"]
 
 [ext_resource type="Script" uid="uid://dll71u2naug44" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://cwj4d3gf6i1jt" path="res://scenes/menu_addon/audio_bars.tscn" id="3_bqqt6"]
 
 [sub_resource type="Gradient" id="Gradient_ekxnf"]
 offsets = PackedFloat32Array(0)
@@ -83,3 +84,56 @@ theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 31
 text = "HIGH SCORE: XXXX"
 horizontal_alignment = 1
+
+[node name="settings_panel" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="settings_panel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="settings_panel/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settings_panel/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master"
+horizontal_alignment = 1
+
+[node name="AudioBars" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+audioBus = "Master"
+
+[node name="Label2" type="Label" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sfx"
+horizontal_alignment = 1
+
+[node name="AudioBars2" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+audioBus = "Sfx"
+
+[node name="Label3" type="Label" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music"
+horizontal_alignment = 1
+
+[node name="AudioBars3" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+audioBus = "Music"

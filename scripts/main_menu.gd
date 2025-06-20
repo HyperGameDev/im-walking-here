@@ -13,6 +13,7 @@ enum menu_states {MAIN_MENU,GAME_OVER,PAUSE,GAMEPLAY}
 
 @onready var label_header: Label = %Label_Header
 @onready var gameplay: Node2D = $"../Gameplay"
+@onready var settings_panel: MarginContainer = %settings_panel
 
 
 func _init() -> void:
@@ -28,6 +29,7 @@ func _on_play_pressed() -> void:
 	update_menu_state.emit(menu_states.GAMEPLAY)
 	
 func _on_settings_pressed() -> void:
+	settings_panel.visible = !settings_panel.visible
 	pass
 
 func _on_update_menu_state(state:menu_states) -> void:

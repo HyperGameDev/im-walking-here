@@ -1,7 +1,8 @@
 extends Node
 
-@onready var menu: Node = $menu
-@onready var game: Node = $game
+@onready var menu_song: AudioStreamPlayer = $menu/menu_song
+@onready var game_song: AudioStreamPlayer = $game/game_song
+
 @onready var bird: Node = $bird
 @onready var discord: Node = $discord
 
@@ -11,11 +12,11 @@ func _ready() -> void:
 
 
 func play_menu() -> void:
-	
+	menu_song.play()
 	pass
 
 func play_game() -> void:
-	
+	game_song.play()
 	pass
 
 func play_bird(pos : Vector2) -> void:
@@ -25,5 +26,5 @@ func play_bird(pos : Vector2) -> void:
 
 
 func play_discord() -> void:
-	
-	pass
+	var discordNoise : AudioStreamPlayer = discord.get_children().pick_random()
+	discordNoise.play()

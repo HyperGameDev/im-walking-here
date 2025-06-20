@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwj4d3gf6i1jt"]
+
+[ext_resource type="Script" uid="uid://bgyorjlvgccuu" path="res://scripts/audio_bars.gd" id="1_oj3n3"]
+
+[node name="AudioBars" type="HSlider"]
+custom_minimum_size = Vector2(50, 0)
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_oj3n3")

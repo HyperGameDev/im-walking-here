@@ -20,11 +20,11 @@ script = ExtResource("1_8qd8g")
 
 [node name="menu" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="menu"]
+[node name="menu_song" type="AudioStreamPlayer" parent="menu"]
 
 [node name="game" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+[node name="game_song" type="AudioStreamPlayer" parent="game"]
 
 [node name="bird" type="Node" parent="."]
 
@@ -68,3 +68,5 @@ stream = ExtResource("13_thanh")
 stream = ExtResource("14_nplbh")
 
 [node name="discord" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="discord"]
