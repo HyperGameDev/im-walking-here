@@ -15,6 +15,10 @@ run/main_scene="uid://cjhaandonxj4g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+SaveGame="*res://scenes/autosave/save_game.tscn"
+
 [debug]
 
 gdscript/warnings/standalone_expression=2
