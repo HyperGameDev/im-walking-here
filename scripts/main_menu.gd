@@ -9,6 +9,7 @@ enum menu_states {MAIN_MENU,GAME_OVER,PAUSE,GAMEPLAY}
 
 @onready var button_play: Button = %Button_Play
 @onready var label_header: Label = %Label_Header
+@onready var gameplay: Node2D = $"../Gameplay"
 
 
 func _init() -> void:
@@ -17,17 +18,20 @@ func _init() -> void:
 func _ready() -> void:
 	button_play.pressed.connect(_on_play_pressed)
 	update_menu_state.connect(_on_update_menu_state)
-	
+	update_menu_state.emit(menu_states.MAIN_MENU)
+
 func _on_play_pressed() -> void:
 	update_menu_state.emit(menu_states.GAMEPLAY)
-	
+
 func _on_update_menu_state(state:menu_states) -> void:
 	menu_state = state
 	
 	match menu_state:
 		menu_states.GAMEPLAY:
+			gameplay.visible = true
 			visible = false
 		menu_states.MAIN_MENU:
+			gameplay.visible = false
 			label_header.text = "I'M WALKIN' HERE"
 			visible = true
 		menu_states.GAME_OVER:
@@ -38,4 +42,3 @@ func _on_update_menu_state(state:menu_states) -> void:
 			label_header.text = "PAUSED"
 		
 	get_tree().paused = state == menu_states.PAUSE
-			
