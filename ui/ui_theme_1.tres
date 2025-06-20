@@ -1,0 +1,48 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dfirkxaumd5y0"]
+
+[sub_resource type="FontVariation" id="FontVariation_64mea"]
+
+[sub_resource type="FontVariation" id="FontVariation_gh1b5"]
+base_font = SubResource("FontVariation_64mea")
+spacing_top = 18
+spacing_bottom = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csxpq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2u17x"]
+bg_color = Color(0.282353, 0, 0.501961, 1)
+corner_radius_top_left = 110
+corner_radius_top_right = 110
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64mea"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 110
+corner_radius_top_right = 110
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ha8ex"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 110
+corner_radius_top_right = 110
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64mea"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.282353, 0, 0.501961, 1)
+Button/constants/outline_size = 20
+Button/font_sizes/font_size = 35
+Button/fonts/font = SubResource("FontVariation_gh1b5")
+Button/styles/focus = SubResource("StyleBoxEmpty_csxpq")
+Button/styles/hover = SubResource("StyleBoxFlat_2u17x")
+Button/styles/normal = SubResource("StyleBoxFlat_64mea")
+Button/styles/pressed = SubResource("StyleBoxFlat_ha8ex")
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_64mea")
+Label/constants/outline_size = 22
+Label/font_sizes/font_size = 50

@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://cjhaandonxj4g"]
+[gd_scene load_steps=4 format=3 uid="uid://cjhaandonxj4g"]
+
+[ext_resource type="PackedScene" uid="uid://cbmdcsvb41xin" path="res://scenes/player.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="2_0e48y"]
+
+[sub_resource type="Curve2D" id="Curve2D_0e48y"]
 
 [node name="Main_Scene" type="Node2D"]
+
+[node name="MainMenu" parent="." instance=ExtResource("2_0e48y")]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0e48y")
+
+[node name="Player" parent="Path2D" instance=ExtResource("1_wtcfe")]
+position = Vector2(320, 180)

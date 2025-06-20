@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx0jwniwoa425"]
+
+[ext_resource type="Script" uid="uid://dll71u2naug44" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="1_l6cm7"]
+
+[sub_resource type="Gradient" id="Gradient_ekxnf"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bqqt6"]
+gradient = SubResource("Gradient_ekxnf")
+
+[node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ekxnf")
+
+[node name="Menu_BG_Underlay" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.203922)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bqqt6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Label_Header" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "I'M WALKIN' HERE"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+
+[node name="Button_Play" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+text = "PLAY"
+
+[node name="Button_Replay" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+text = "REPLAY"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+
+[node name="Label_Footer" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 31
+text = "HIGH SCORE: XXXX"
+horizontal_alignment = 1
