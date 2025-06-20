@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dfirkxaumd5y0"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dfirkxaumd5y0"]
 
 [sub_resource type="FontVariation" id="FontVariation_64mea"]
 
@@ -32,6 +32,11 @@ corner_radius_bottom_left = 70
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64mea"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh1b5"]
+bg_color = Color(0.201527, 0.201527, 0.201526, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_csxpq"]
+
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
@@ -46,3 +51,5 @@ Button/styles/pressed = SubResource("StyleBoxFlat_ha8ex")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_64mea")
 Label/constants/outline_size = 22
 Label/font_sizes/font_size = 50
+ProgressBar/styles/background = SubResource("StyleBoxFlat_gh1b5")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_csxpq")

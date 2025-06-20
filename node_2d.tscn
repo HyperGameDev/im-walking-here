@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjhaandonxj4g"]
+[gd_scene load_steps=8 format=3 uid="uid://cjhaandonxj4g"]
 
 [ext_resource type="PackedScene" uid="uid://cbmdcsvb41xin" path="res://scenes/player.tscn" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="2_0e48y"]
 [ext_resource type="Script" uid="uid://cbyksxwupl0i2" path="res://scripts/path.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://w7xvpldhdu80" path="res://assets/temp_lake_placeholder.png" id="4_0hol4"]
 [ext_resource type="PackedScene" uid="uid://tffjypp2p2p" path="res://scenes/world_entities/tree_2.tscn" id="5_q6r6c"]
+[ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="6_kdubu"]
 
 [sub_resource type="Curve2D" id="Curve2D_0e48y"]
 _data = {
@@ -43,14 +44,27 @@ position = Vector2(116, 652)
 [node name="UI" type="CanvasLayer" parent="Gameplay"]
 
 [node name="MarginContainer" type="MarginContainer" parent="Gameplay/UI"]
-anchors_preset = 15
+anchors_preset = 11
+anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_left = -314.0
+grow_horizontal = 0
 grow_vertical = 2
+theme_override_constants/margin_top = 100
 
-[node name="ProgressBar" type="ProgressBar" parent="Gameplay/UI/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Gameplay/UI/MarginContainer"]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="Gameplay/UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_kdubu")
+text = "Happiness"
+
+[node name="ProgressBar" type="ProgressBar" parent="Gameplay/UI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("6_kdubu")
 value = 23.32
 
 [editable path="Gameplay/Path2D/Player"]

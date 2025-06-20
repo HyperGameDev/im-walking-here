@@ -55,6 +55,14 @@ size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
 text = "PLAY"
 
+[node name="Button_Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+text = "SETTINGS"
+
 [node name="Button_Replay" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false

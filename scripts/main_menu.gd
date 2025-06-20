@@ -8,6 +8,9 @@ var menu_state: menu_states
 enum menu_states {MAIN_MENU,GAME_OVER,PAUSE,GAMEPLAY}
 
 @onready var button_play: Button = %Button_Play
+@onready var button_settings: Button = %Button_Settings
+
+
 @onready var label_header: Label = %Label_Header
 @onready var gameplay: Node2D = $"../Gameplay"
 
@@ -17,11 +20,15 @@ func _init() -> void:
 
 func _ready() -> void:
 	button_play.pressed.connect(_on_play_pressed)
+	button_settings.pressed.connect(_on_settings_pressed)
 	update_menu_state.connect(_on_update_menu_state)
 	update_menu_state.emit(menu_states.MAIN_MENU)
 
 func _on_play_pressed() -> void:
 	update_menu_state.emit(menu_states.GAMEPLAY)
+	
+func _on_settings_pressed() -> void:
+	pass
 
 func _on_update_menu_state(state:menu_states) -> void:
 	menu_state = state
