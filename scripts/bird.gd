@@ -1,4 +1,6 @@
 extends AnimatedSprite2D
+class_name Bird
+
 
 var TimerMax : float = randf_range(3,7)
 var time : float = TimerMax

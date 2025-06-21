@@ -11,11 +11,13 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 210.0
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 30
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Container_Left"]
 layout_mode = 2
+mouse_filter = 2
 split_offset = 345
 
 [node name="Button_Pause" type="Button" parent="Container_Left/VSplitContainer"]
@@ -24,12 +26,14 @@ custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 36
 text = "||"
 
 [node name="VBox_Top_UI" type="VBoxContainer" parent="Container_Left/VSplitContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Label_Happiness" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
 layout_mode = 2
@@ -42,12 +46,14 @@ unique_name_in_owner = true
 process_mode = 4
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 value = 1.0
 
 [node name="HSeparator" type="HSeparator" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 
 [node name="Label_Score_Text" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
@@ -73,16 +79,19 @@ offset_left = -204.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_bottom = 30
 
 [node name="VBox_Bottom_UI" type="VBoxContainer" parent="Container_Right"]
 layout_mode = 2
+mouse_filter = 2
 alignment = 2
 
 [node name="HSeparator2" type="HSeparator" parent="Container_Right/VBox_Bottom_UI"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 
 [node name="Label_Time_Text" type="Label" parent="Container_Right/VBox_Bottom_UI"]
