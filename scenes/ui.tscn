@@ -43,7 +43,7 @@ process_mode = 4
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-value = 28.87
+value = 1.0
 
 [node name="HSeparator" type="HSeparator" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
 custom_minimum_size = Vector2(0, 30)
