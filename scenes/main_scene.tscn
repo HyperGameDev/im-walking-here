@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjhaandonxj4g"]
+[gd_scene load_steps=9 format=3 uid="uid://cjhaandonxj4g"]
 
 [ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="1_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://cmkmqncwn84vr" path="res://assets/animated_sprite_sheets/lake.tscn" id="2_18nlu"]
 [ext_resource type="Texture2D" uid="uid://w7xvpldhdu80" path="res://assets/temp_lake_placeholder.png" id="2_c16ls"]
 [ext_resource type="Script" uid="uid://cbyksxwupl0i2" path="res://scripts/path.gd" id="3_18nlu"]
 [ext_resource type="PackedScene" uid="uid://cbmdcsvb41xin" path="res://scenes/player.tscn" id="4_c1pb6"]
@@ -21,7 +22,13 @@ visible = false
 
 [node name="Gameplay" type="Node2D" parent="."]
 
+[node name="Lake" parent="Gameplay" instance=ExtResource("2_18nlu")]
+position = Vector2(1888, 183)
+scale = Vector2(2.73802, 2.73802)
+autoplay = "default"
+
 [node name="LyzTemp2" type="Node2D" parent="Gameplay"]
+visible = false
 
 [node name="TempLakePlaceholder" type="Sprite2D" parent="Gameplay/LyzTemp2"]
 position = Vector2(1856, 184)
@@ -102,12 +109,11 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -255.0
+offset_left = -204.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 30
 
 [node name="VBox_Bottom_UI" type="VBoxContainer" parent="Gameplay/UI/Container_Right"]

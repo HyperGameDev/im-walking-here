@@ -10,7 +10,7 @@ spacing_bottom = 20
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csxpq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2u17x"]
-bg_color = Color(0.282353, 0, 0.501961, 1)
+bg_color = Color(0.486275, 0, 1, 1)
 corner_radius_top_left = 110
 corner_radius_top_right = 110
 corner_radius_bottom_right = 70
@@ -37,13 +37,13 @@ bg_color = Color(0, 0, 0, 1)
 corner_radius_bottom_right = 155
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_csxpq"]
-bg_color = Color(0.282353, 0, 0.501961, 1)
+bg_color = Color(0.486275, 0, 1, 1)
 corner_radius_bottom_right = 155
 
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
-Button/colors/font_outline_color = Color(0.282353, 0, 0.501961, 1)
+Button/colors/font_outline_color = Color(0.486275, 0, 1, 1)
 Button/constants/outline_size = 20
 Button/font_sizes/font_size = 35
 Button/fonts/font = SubResource("FontVariation_gh1b5")
