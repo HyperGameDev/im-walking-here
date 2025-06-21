@@ -51,6 +51,7 @@ autoplay = "default"
 [node name="Player" parent="." instance=ExtResource("4_wu84c")]
 unique_name_in_owner = true
 position = Vector2(288, 656)
+animation = &"idle"
 
 [node name="Menu_BG_Underlay" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.203922)
