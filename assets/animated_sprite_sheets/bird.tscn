@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://by7am8a6v1s1x"]
+[gd_scene load_steps=29 format=3 uid="uid://by7am8a6v1s1x"]
 
 [ext_resource type="Texture2D" uid="uid://0cew44xxxa1c" path="res://assets/2dart/bird/laughing_bird0001.png" id="1_jydl4"]
 [ext_resource type="Texture2D" uid="uid://dy2kjgvdhcb8k" path="res://assets/2dart/bird/laughing_bird0004.png" id="2_udaa1"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dm8txfa1rwc66" path="res://assets/2dart/bird/laughing_bird0031.png" id="11_7n7a2"]
 [ext_resource type="Texture2D" uid="uid://dr4wwd65qk28w" path="res://assets/2dart/bird/laughing_bird0034.png" id="12_yr8k7"]
 [ext_resource type="Texture2D" uid="uid://skpctvnnyg2t" path="res://assets/2dart/bird/laughing_bird0037.png" id="13_k171x"]
+[ext_resource type="Script" uid="uid://d0ih13u61xbpw" path="res://scripts/bird.gd" id="14_udaa1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iao0y"]
 atlas = ExtResource("1_jydl4")
@@ -116,3 +117,4 @@ animations = [{
 [node name="Bird" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ydy1l")
 frame_progress = 0.774263
+script = ExtResource("14_udaa1")

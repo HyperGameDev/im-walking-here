@@ -1,19 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://tffjypp2p2p"]
+[gd_scene load_steps=8 format=3 uid="uid://tffjypp2p2p"]
 
-[ext_resource type="Texture2D" uid="uid://cf3ya3tx7763y" path="res://assets/tree placeholders.png" id="1_2un42"]
 [ext_resource type="PackedScene" uid="uid://cuta76g68jmdb" path="res://scenes/components/on_screen_item.tscn" id="2_60070"]
+[ext_resource type="Texture2D" uid="uid://x67eqjro8toa" path="res://assets/2dart/Environment/tree.png" id="2_exmri"]
 [ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="2_h7mqr"]
+[ext_resource type="PackedScene" uid="uid://by7am8a6v1s1x" path="res://assets/animated_sprite_sheets/bird.tscn" id="2_nfnnt"]
 [ext_resource type="PackedScene" uid="uid://cumfy0jt13tb5" path="res://scenes/components/clickable.tscn" id="3_h7mqr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_exmri"]
-atlas = ExtResource("1_2un42")
-region = Rect2(100, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfnnt"]
+atlas = ExtResource("2_exmri")
+region = Rect2(0, 0, 536, 839)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nfnnt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_exmri")
+"texture": SubResource("AtlasTexture_nfnnt")
 }],
 "loop": true,
 "name": &"default",
@@ -23,17 +24,21 @@ animations = [{
 [node name="Tree2" type="Node2D"]
 script = ExtResource("2_h7mqr")
 
+[node name="Bird" parent="." instance=ExtResource("2_nfnnt")]
+position = Vector2(155, -438)
+autoplay = "default"
+
 [node name="Tree1" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nfnnt")
 metadata/_edit_lock_ = true
 
 [node name="OnScreenItem" parent="." instance=ExtResource("2_60070")]
-position = Vector2(3.5, 4.5)
-scale = Vector2(6.55, 6.25)
+position = Vector2(-13.5, 5.50006)
+scale = Vector2(29.05, 44.55)
 
 [node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("3_h7mqr")]
-offset_left = -43.0
-offset_top = -44.0
-offset_right = 50.0
-offset_bottom = 56.0
+offset_left = -264.0
+offset_top = -404.0
+offset_right = 255.0
+offset_bottom = 419.0
 parent = NodePath("..")
