@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7kdwxajdc2yh"]
+[gd_scene load_steps=24 format=3 uid="uid://b7kdwxajdc2yh"]
 
 [ext_resource type="Script" uid="uid://biuqqh2pcyoeh" path="res://scripts/audio_manager.gd" id="1_8qd8g"]
 [ext_resource type="AudioStream" uid="uid://1oaxjd77f2e3" path="res://sound/01-DinosaurOne.wav" id="2_2y2jw"]
 [ext_resource type="AudioStream" uid="uid://cff217jcc73yp" path="res://sound/birb.mp3" id="2_2y5yn"]
+[ext_resource type="AudioStream" uid="uid://bxbvldoauxbd4" path="res://sound/birbsmall.mp3" id="2_f6jxr"]
 [ext_resource type="AudioStream" uid="uid://b6kns43gfcoic" path="res://sound/02-DinosaurTwo.wav" id="3_2y5yn"]
 [ext_resource type="AudioStream" uid="uid://df01ik823kxcw" path="res://sound/03-DinosaurThree.wav" id="4_oucy0"]
 [ext_resource type="AudioStream" uid="uid://ugn7w8xwrgld" path="res://sound/04-DinosaurFour.wav" id="5_cuol6"]
@@ -29,6 +30,7 @@ script = ExtResource("1_8qd8g")
 [node name="menu" type="Node" parent="."]
 
 [node name="menu_song" type="AudioStreamPlayer" parent="menu"]
+stream = ExtResource("2_f6jxr")
 bus = &"Music"
 
 [node name="game" type="Node" parent="."]

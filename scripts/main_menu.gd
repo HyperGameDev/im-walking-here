@@ -39,15 +39,24 @@ func _on_update_menu_state(state:menu_states) -> void:
 		menu_states.GAMEPLAY:
 			gameplay.visible = true
 			visible = false
+			if Player.ref != null:
+				Player.ref.walk_state()
+			#AudioManager.play_game()
 		menu_states.MAIN_MENU:
 			gameplay.visible = false
 			label_header.text = "I'M WALKIN' HERE"
 			visible = true
+			#AudioManager.play_menu()
 		menu_states.GAME_OVER:
 			visible = true
 			label_header.text = "WALK OVER"
+			GameManager.finish_round()
+			if Player.ref != null:
+				Player.ref.idle_state()
 		menu_states.PAUSE:
 			visible = true
 			label_header.text = "PAUSED"
+			if Player.ref != null:
+				Player.ref.stop_state()
 		
 	get_tree().paused = state == menu_states.PAUSE

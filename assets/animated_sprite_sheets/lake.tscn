@@ -1,0 +1,106 @@
+[gd_scene load_steps=25 format=3 uid="uid://cmkmqncwn84vr"]
+
+[ext_resource type="Texture2D" uid="uid://bovxjxfyxdl2d" path="res://assets/2dart/Environment/lake/lake0001.png" id="1_a1rmm"]
+[ext_resource type="Texture2D" uid="uid://c0hjh4rooe30r" path="res://assets/2dart/Environment/lake/lake0004.png" id="2_id6mw"]
+[ext_resource type="Texture2D" uid="uid://bpr8v1hkfclgn" path="res://assets/2dart/Environment/lake/lake0007.png" id="3_qtvga"]
+[ext_resource type="Texture2D" uid="uid://453yvwotcf7t" path="res://assets/2dart/Environment/lake/lake0010.png" id="4_wqgao"]
+[ext_resource type="Texture2D" uid="uid://brs0vewec05hj" path="res://assets/2dart/Environment/lake/lake0013.png" id="5_s3j8j"]
+[ext_resource type="Texture2D" uid="uid://cxjpc7ei13owx" path="res://assets/2dart/Environment/lake/lake0016.png" id="6_q2hjq"]
+[ext_resource type="Texture2D" uid="uid://bia4fejqctiya" path="res://assets/2dart/Environment/lake/lake0019.png" id="7_mo4jb"]
+[ext_resource type="Texture2D" uid="uid://cyaxtrgxrtqr" path="res://assets/2dart/Environment/lake/lake0022.png" id="8_15jmy"]
+[ext_resource type="Texture2D" uid="uid://ct80vum18md4w" path="res://assets/2dart/Environment/lake/lake0025.png" id="9_ufk5a"]
+[ext_resource type="Texture2D" uid="uid://dgbkmbwpk5a63" path="res://assets/2dart/Environment/lake/lake0028.png" id="10_t6so3"]
+[ext_resource type="Texture2D" uid="uid://7pgixlilkoqm" path="res://assets/2dart/Environment/lake/lake0031.png" id="11_arv58"]
+[ext_resource type="Texture2D" uid="uid://dkty4nmxqpwcn" path="res://assets/2dart/Environment/lake/lake0034.png" id="12_42kbd"]
+[ext_resource type="Texture2D" uid="uid://d22nctbh7g5yn" path="res://assets/2dart/Environment/lake/lake0037.png" id="13_oms5y"]
+[ext_resource type="Texture2D" uid="uid://2ube7tdq3nb" path="res://assets/2dart/Environment/lake/lake0040.png" id="14_vnsbn"]
+[ext_resource type="Texture2D" uid="uid://bcjom4chojwes" path="res://assets/2dart/Environment/lake/lake0043.png" id="15_6h827"]
+[ext_resource type="Texture2D" uid="uid://c4prgdo6wahqx" path="res://assets/2dart/Environment/lake/lake0046.png" id="16_bym8i"]
+[ext_resource type="Texture2D" uid="uid://bdvinggutaiks" path="res://assets/2dart/Environment/lake/lake0049.png" id="17_b8dpw"]
+[ext_resource type="Texture2D" uid="uid://nghtc0jmtxik" path="res://assets/2dart/Environment/lake/lake0052.png" id="18_tgggh"]
+[ext_resource type="Texture2D" uid="uid://cek443gv2ncaq" path="res://assets/2dart/Environment/lake/lake0055.png" id="19_q2fty"]
+[ext_resource type="Texture2D" uid="uid://dyym3004joexw" path="res://assets/2dart/Environment/lake/lake0058.png" id="20_7n8gn"]
+[ext_resource type="Texture2D" uid="uid://btej0yhl5we07" path="res://assets/2dart/Environment/lake/lake0061.png" id="21_ar200"]
+[ext_resource type="Texture2D" uid="uid://ygbgskp10fdg" path="res://assets/2dart/Environment/lake/lake0064.png" id="22_cimk0"]
+[ext_resource type="Texture2D" uid="uid://c737vt7t34i85" path="res://assets/2dart/Environment/lake/lake0067.png" id="23_sf05e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5n107"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a1rmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_id6mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtvga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wqgao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s3j8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q2hjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mo4jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_15jmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ufk5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t6so3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_arv58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_42kbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oms5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vnsbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6h827")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bym8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_b8dpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tgggh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q2fty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7n8gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ar200")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cimk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_sf05e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Lake" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_5n107")
+frame_progress = 0.965437
