@@ -33,6 +33,8 @@ visible = false
 
 [node name="Gameplay" type="Node2D" parent="."]
 
+[node name="UI" parent="Gameplay" instance=ExtResource("7_c16ls")]
+
 [node name="LyzTemp2" type="Node2D" parent="Gameplay"]
 visible = false
 
@@ -51,9 +53,6 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="Gameplay/Path2D" instance=ExtResource("4_c1pb6")]
 position = Vector2(-538.179, -446.047)
 rotation = -1.78508
-
-[node name="UI" parent="Gameplay" instance=ExtResource("7_c16ls")]
-script = null
 
 [node name="scenery" type="Node2D" parent="Gameplay"]
 

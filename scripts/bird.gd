@@ -1,7 +1,6 @@
 extends AnimatedSprite2D
 class_name Bird
 
-
 var TimerMax : float = randf_range(3,7)
 var time : float = TimerMax
 
@@ -15,6 +14,7 @@ func TimerCount(InDelta: float) -> void:
 
 func _process(delta: float) -> void:
 	TimerCount(delta)
+		
 
 func make_bird_noise() -> void:
 	var i : int = randi_range(0,1)

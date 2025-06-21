@@ -1,6 +1,6 @@
 class_name UI extends CanvasLayer
 
-static var ref: CanvasLayer
+static var ref: UI
 
 @onready var progress_happiness: ProgressBar = %Progress_Happiness
 @onready var label_score: Label = %Label_Score_Value
@@ -18,6 +18,9 @@ func _process(delta: float) -> void:
 		label_time.text = "%02d:%02d" % [minutes, seconds]
 	else:
 		GameManager.finish_round()
+		#
+func reduce_happiness(amount:float) -> void:
+	progress_happiness.value -= amount
 		
 func update_score() -> void:
 	
