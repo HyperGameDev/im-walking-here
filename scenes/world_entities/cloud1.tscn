@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://kinmjnpa5gah"]
+
+[ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="1_1cbit"]
+[ext_resource type="Texture2D" uid="uid://b7i40cgy7f4xg" path="res://assets/2dart/Environment/cloud.png" id="2_ktjhb"]
+[ext_resource type="PackedScene" uid="uid://b8rho4vchyiej" path="res://scenes/components/move_component.tscn" id="3_4d5ds"]
+
+[node name="Cloud1" type="Node2D"]
+script = ExtResource("1_1cbit")
+metadata/_custom_type_script = "uid://d063dsd86jl6b"
+
+[node name="Cloud" type="Sprite2D" parent="."]
+texture = ExtResource("2_ktjhb")
+
+[node name="MoveComponent" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("3_4d5ds")]
+parent = NodePath("..")

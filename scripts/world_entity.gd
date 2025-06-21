@@ -1,5 +1,5 @@
 extends Node2D
-
+class_name WorldEntity
 
 func _ready() -> void:
 	if get_child_count() < 2:

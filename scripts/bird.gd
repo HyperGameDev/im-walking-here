@@ -10,11 +10,10 @@ func TimerCount(InDelta: float) -> void:
 	else:
 		time = TimerMax
 		make_bird_noise()
-		#Sends a signal here
 
 func _process(delta: float) -> void:
 	TimerCount(delta)
-		
+	
 
 func make_bird_noise() -> void:
 	var i : int = randi_range(0,1)
@@ -22,4 +21,4 @@ func make_bird_noise() -> void:
 		AudioManager.play_bird(global_position)
 	else:
 		AudioManager.play_discord()
-	# TODO make the player lose scoremult
+	UI.ref.reduce_happiness(5)

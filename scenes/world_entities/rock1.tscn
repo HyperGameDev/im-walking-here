@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr77hxfjjvxb5"]
+
+[ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="1_56oi1"]
+[ext_resource type="Texture2D" uid="uid://bqhc6np2qq7sp" path="res://assets/2dart/Environment/rock.png" id="2_yhkic"]
+
+[node name="Rock1" type="Node2D"]
+script = ExtResource("1_56oi1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yhkic")
+offset = Vector2(0, -225)

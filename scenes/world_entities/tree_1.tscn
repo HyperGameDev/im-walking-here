@@ -21,3 +21,4 @@ animations = [{
 
 [node name="Tree1" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a171d")
+offset = Vector2(0, -348.5)

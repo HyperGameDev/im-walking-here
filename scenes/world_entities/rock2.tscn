@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://j238evkbg6mi"]
+
+[ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="1_3ntki"]
+[ext_resource type="Texture2D" uid="uid://bqhc6np2qq7sp" path="res://assets/2dart/Environment/rock.png" id="2_0kan5"]
+[ext_resource type="PackedScene" uid="uid://by7am8a6v1s1x" path="res://assets/animated_sprite_sheets/bird.tscn" id="3_4ickw"]
+[ext_resource type="PackedScene" uid="uid://cuta76g68jmdb" path="res://scenes/components/on_screen_item.tscn" id="4_4n1rc"]
+[ext_resource type="PackedScene" uid="uid://cumfy0jt13tb5" path="res://scenes/components/clickable.tscn" id="5_3apk0"]
+
+[node name="Rock2" type="Node2D"]
+script = ExtResource("1_3ntki")
+
+[node name="Bird" parent="." instance=ExtResource("3_4ickw")]
+position = Vector2(107, -461)
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0kan5")
+offset = Vector2(0, -225)
+
+[node name="OnScreenItem" parent="." instance=ExtResource("4_4n1rc")]
+position = Vector2(139, -468.5)
+scale = Vector2(15.7, 18.45)
+
+[node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("5_3apk0")]
+z_index = 5
+offset_left = -36.0
+offset_top = -701.0
+offset_right = 313.0
+offset_bottom = -281.0
+parent = NodePath("..")
