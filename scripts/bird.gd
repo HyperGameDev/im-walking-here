@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 class_name Bird
 
-var TimerMax : float = randf_range(2,5)
+var TimerMax : float = randf_range(2,4)
 var time : float = TimerMax
 
 func TimerCount(InDelta: float) -> void:
@@ -25,5 +25,5 @@ func make_bird_noise() -> void:
 		AudioManager.play_discord(global_position)
 	var score_cost : float = 300
 	score_cost /= global_position.distance_to(Player.ref.global_position)
-	score_cost*=10
+	score_cost*=80*Player.ref.progress_ratio
 	UI.ref.reduce_happiness(score_cost)
