@@ -24,7 +24,7 @@ func _ready() -> void:
 	button_settings.pressed.connect(_on_settings_pressed)
 	update_menu_state.connect(_on_update_menu_state)
 	update_menu_state.emit(menu_states.MAIN_MENU)
-
+	
 func _on_play_pressed() -> void:
 	update_menu_state.emit(menu_states.GAMEPLAY)
 	

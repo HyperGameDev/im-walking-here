@@ -1,6 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh42t8qo7gom2"]
+[gd_scene load_steps=8 format=3 uid="uid://cjhaandonxj4g"]
 
-[ext_resource type="Script" uid="uid://15pd67gb8c1a" path="res://scripts/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="1_rt2n2"]
+[ext_resource type="Texture2D" uid="uid://w7xvpldhdu80" path="res://assets/temp_lake_placeholder.png" id="2_c16ls"]
+[ext_resource type="Script" uid="uid://cbyksxwupl0i2" path="res://scripts/path.gd" id="3_18nlu"]
+[ext_resource type="PackedScene" uid="uid://cbmdcsvb41xin" path="res://scenes/player.tscn" id="4_c1pb6"]
+[ext_resource type="PackedScene" uid="uid://tffjypp2p2p" path="res://scenes/world_entities/tree_2.tscn" id="5_6wevv"]
+[ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="6_e1cbu"]
+
+[sub_resource type="Curve2D" id="Curve2D_0e48y"]
+_data = {
+"points": PackedVector2Array(27.3131, 125.508, -27.3131, -125.508, -360, -252, -41.8342, 121.069, 41.8342, -121.069, -280, -644, -188.412, 86.404, 188.412, -86.404, -8, -1012, -248.221, -11.4125, 248.221, 11.4125, 1768, -1132, -319.549, -128.39, 319.549, 128.39, 3088, -916, -11.4125, -402.29, 11.4125, 402.29, 3528, -4, 276.752, -219.69, -276.752, 219.69, 2904, 852, 559.211, -19.9718, -559.211, 19.9718, 1904, 1212, 326.934, 198.093, -326.934, -198.093, 328, 916, 40.6919, 80.5031, -40.6919, -80.5031, -296, -60, 1.50263, 0.751315, -1.50263, -0.751315, -360, -252)
+}
+point_count = 11
 
 [node name="Main_Scene" type="Node2D"]
-script = ExtResource("1_w2twt")
+
+[node name="MainMenu" parent="." instance=ExtResource("1_rt2n2")]
+layer = 100
+visible = false
+
+[node name="Gameplay" type="Node2D" parent="."]
+
+[node name="LyzTemp2" type="Node2D" parent="Gameplay"]
+
+[node name="TempLakePlaceholder" type="Sprite2D" parent="Gameplay/LyzTemp2"]
+position = Vector2(1856, 184)
+scale = Vector2(4.31034, 4.31034)
+texture = ExtResource("2_c16ls")
+
+[node name="Path2D" type="Path2D" parent="Gameplay"]
+unique_name_in_owner = true
+position = Vector2(320, 180)
+curve = SubResource("Curve2D_0e48y")
+script = ExtResource("3_18nlu")
+
+[node name="Player" parent="Gameplay/Path2D" instance=ExtResource("4_c1pb6")]
+position = Vector2(-360, -252)
+rotation = -1.78508
+
+[node name="Tree2" parent="Gameplay" instance=ExtResource("5_6wevv")]
+position = Vector2(116, 652)
+
+[node name="UI" type="CanvasLayer" parent="Gameplay"]
+
+[node name="Container_Left" type="MarginContainer" parent="Gameplay/UI"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 184.0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Gameplay/UI/Container_Left"]
+layout_mode = 2
+
+[node name="Container_Right" type="MarginContainer" parent="Gameplay/UI"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gameplay/UI/Container_Right"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_e1cbu")
+text = "Happiness"
+
+[node name="ProgressBar" type="ProgressBar" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("6_e1cbu")
+value = 23.32
+
+[editable path="Gameplay/Path2D/Player"]
