@@ -42,15 +42,18 @@ func _on_update_menu_state(state:menu_states) -> void:
 			if Player.ref != null:
 				Player.ref.walk_state()
 			AudioManager.play_game()
+			get_tree().call_group("spawners", "start_round")
 		menu_states.MAIN_MENU:
 			gameplay.visible = false
 			label_header.text = "I'M WALKIN' HERE"
 			visible = true
 			AudioManager.play_menu()
+			get_tree().call_group("spawners", "cleanup")
 		menu_states.GAME_OVER:
 			visible = true
 			label_header.text = "WALK OVER"
 			GameManager.finish_round()
+			get_tree().call_group("spawners", "cleanup")
 			if Player.ref != null:
 				Player.ref.idle_state()
 		menu_states.PAUSE:

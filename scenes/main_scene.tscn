@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjhaandonxj4g"]
+[gd_scene load_steps=14 format=3 uid="uid://cjhaandonxj4g"]
 
 [ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="1_rt2n2"]
 [ext_resource type="PackedScene" uid="uid://cmkmqncwn84vr" path="res://assets/animated_sprite_sheets/lake.tscn" id="2_18nlu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c2iwbbogguqq4" path="res://assets/2dart/Environment/path.png" id="7_c1pb6"]
 [ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="7_c16ls"]
 [ext_resource type="Texture2D" uid="uid://drwho6nbp0avu" path="res://assets/2dart/Environment/grass_tile.png" id="8_18nlu"]
+[ext_resource type="PackedScene" uid="uid://ceje773eeqmqy" path="res://scenes/components/world_entity_spawner.tscn" id="10_6wevv"]
 
 [sub_resource type="Curve2D" id="Curve2D_0e48y"]
 _data = {
@@ -69,11 +70,376 @@ autoplay = "default"
 frame_progress = 0.0
 
 [node name="Path" type="Sprite2D" parent="Gameplay/scenery"]
-position = Vector2(1509, 15)
+position = Vector2(1879, 275)
 scale = Vector2(2.1589, 2.29873)
 texture = ExtResource("7_c1pb6")
 
 [node name="Tree2" parent="Gameplay/scenery" instance=ExtResource("5_6wevv")]
 position = Vector2(-407, -390)
+
+[node name="entity_spawners" type="Node2D" parent="Gameplay/scenery"]
+
+[node name="WorldEntitySpawner" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-539, 1103)
+
+[node name="WorldEntitySpawner2" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(0, 459)
+
+[node name="WorldEntitySpawner3" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-765, 417)
+
+[node name="WorldEntitySpawner4" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-873, 275)
+
+[node name="WorldEntitySpawner5" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-921, 30)
+
+[node name="WorldEntitySpawner6" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-225, -187)
+
+[node name="WorldEntitySpawner7" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-1124, -283)
+
+[node name="WorldEntitySpawner8" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-873, -585)
+
+[node name="WorldEntitySpawner9" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-873, -585)
+
+[node name="WorldEntitySpawner10" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-879, -845)
+
+[node name="WorldEntitySpawner11" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-74, -685)
+
+[node name="WorldEntitySpawner12" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-696, -1181)
+
+[node name="WorldEntitySpawner13" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-460, -1388)
+
+[node name="WorldEntitySpawner14" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(243, -950)
+
+[node name="WorldEntitySpawner15" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-32, -1523)
+
+[node name="WorldEntitySpawner16" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(284, -1795)
+
+[node name="WorldEntitySpawner17" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-258, -1741)
+
+[node name="WorldEntitySpawner18" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-634, -1712)
+
+[node name="WorldEntitySpawner19" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-800, -1268)
+
+[node name="WorldEntitySpawner20" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-1116, -1058)
+
+[node name="WorldEntitySpawner21" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-229, -469)
+
+[node name="WorldEntitySpawner22" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(72, -863)
+
+[node name="WorldEntitySpawner23" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(155, -1641)
+
+[node name="WorldEntitySpawner24" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(619, -969)
+
+[node name="WorldEntitySpawner25" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(749, -1651)
+
+[node name="WorldEntitySpawner26" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(601, -1809)
+
+[node name="WorldEntitySpawner27" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1114, -1798)
+
+[node name="WorldEntitySpawner28" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(879, -993)
+
+[node name="WorldEntitySpawner29" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1380, -1684)
+
+[node name="WorldEntitySpawner30" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1239, -1008)
+
+[node name="WorldEntitySpawner31" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1133, -1559)
+
+[node name="WorldEntitySpawner32" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1817, -1624)
+
+[node name="WorldEntitySpawner33" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1608, -986)
+
+[node name="WorldEntitySpawner34" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1547, -1559)
+
+[node name="WorldEntitySpawner35" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1703, -1863)
+
+[node name="WorldEntitySpawner36" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1376, -1916)
+
+[node name="WorldEntitySpawner37" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1866, -951)
+
+[node name="WorldEntitySpawner38" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2177, -1646)
+
+[node name="WorldEntitySpawner39" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2021, -1768)
+
+[node name="WorldEntitySpawner40" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2154, -948)
+
+[node name="WorldEntitySpawner41" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2439, -1696)
+
+[node name="WorldEntitySpawner42" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2568, -1020)
+
+[node name="WorldEntitySpawner43" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2663, -1829)
+
+[node name="WorldEntitySpawner44" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2993, -1013)
+
+[node name="WorldEntitySpawner45" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2366, -1898)
+
+[node name="WorldEntitySpawner46" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3312, -1837)
+
+[node name="WorldEntitySpawner47" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3304, -994)
+
+[node name="WorldEntitySpawner48" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3061, -1905)
+
+[node name="WorldEntitySpawner49" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2822, -902)
+
+[node name="WorldEntitySpawner50" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3680, -1726)
+
+[node name="WorldEntitySpawner51" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3555, -769)
+
+[node name="WorldEntitySpawner52" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3988, -1650)
+
+[node name="WorldEntitySpawner53" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3866, -461)
+
+[node name="WorldEntitySpawner54" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4257, -1372)
+
+[node name="WorldEntitySpawner55" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4470, -916)
+
+[node name="WorldEntitySpawner56" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4580, -585)
+
+[node name="WorldEntitySpawner57" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4626, -340)
+
+[node name="WorldEntitySpawner58" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4679, -108)
+
+[node name="WorldEntitySpawner59" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4679, 181)
+
+[node name="WorldEntitySpawner60" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4626, 475)
+
+[node name="WorldEntitySpawner61" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4626, 475)
+
+[node name="WorldEntitySpawner62" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4823, 547)
+
+[node name="WorldEntitySpawner63" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4948, -121)
+
+[node name="WorldEntitySpawner64" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4758, -520)
+
+[node name="WorldEntitySpawner65" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4633, -877)
+
+[node name="WorldEntitySpawner66" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4523, -1173)
+
+[node name="WorldEntitySpawner67" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4288, -1211)
+
+[node name="WorldEntitySpawner68" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4387, -1659)
+
+[node name="WorldEntitySpawner69" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4220, -1610)
+
+[node name="WorldEntitySpawner70" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3388, -813)
+
+[node name="WorldEntitySpawner71" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3122, -752)
+
+[node name="WorldEntitySpawner72" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3900, 140)
+
+[node name="WorldEntitySpawner73" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3987, -95)
+
+[node name="WorldEntitySpawner74" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4530, 771)
+
+[node name="WorldEntitySpawner75" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4701, 1003)
+
+[node name="WorldEntitySpawner76" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4940, 141)
+
+[node name="WorldEntitySpawner77" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4450, 1170)
+
+[node name="WorldEntitySpawner78" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4693, 1311)
+
+[node name="WorldEntitySpawner79" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4412, 939)
+
+[node name="WorldEntitySpawner80" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3698, 650)
+
+[node name="WorldEntitySpawner81" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3975, 399)
+
+[node name="WorldEntitySpawner82" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3356, 991)
+
+[node name="WorldEntitySpawner83" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3614, 1014)
+
+[node name="WorldEntitySpawner84" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3158, 1272)
+
+[node name="WorldEntitySpawner85" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4320, 1310)
+
+[node name="WorldEntitySpawner86" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3963, 1781)
+
+[node name="WorldEntitySpawner87" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4198, 1462)
+
+[node name="WorldEntitySpawner88" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4551, 1519)
+
+[node name="WorldEntitySpawner89" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2891, 1378)
+
+[node name="WorldEntitySpawner90" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3783, 1955)
+
+[node name="WorldEntitySpawner91" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3468, 2099)
+
+[node name="WorldEntitySpawner92" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3012, 2281)
+
+[node name="WorldEntitySpawner93" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3859, 2129)
+
+[node name="WorldEntitySpawner94" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3468, 2281)
+
+[node name="WorldEntitySpawner95" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(3438, 1210)
+
+[node name="WorldEntitySpawner96" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4186, 2072)
+
+[node name="WorldEntitySpawner97" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(4311, 1742)
+
+[node name="WorldEntitySpawner98" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2598, 1385)
+
+[node name="WorldEntitySpawner99" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2351, 2422)
+
+[node name="WorldEntitySpawner100" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2799, 2365)
+
+[node name="WorldEntitySpawner101" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(2385, 1526)
+
+[node name="WorldEntitySpawner102" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1888, 1480)
+
+[node name="WorldEntitySpawner103" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1474, 2357)
+
+[node name="WorldEntitySpawner104" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1941, 2353)
+
+[node name="WorldEntitySpawner105" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1599, 1396)
+
+[node name="WorldEntitySpawner106" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(752, 2228)
+
+[node name="WorldEntitySpawner107" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1211, 2179)
+
+[node name="WorldEntitySpawner108" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(319, 1951)
+
+[node name="WorldEntitySpawner109" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(1173, 1286)
+
+[node name="WorldEntitySpawner110" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(672, 1077)
+
+[node name="WorldEntitySpawner111" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(19, 1772)
+
+[node name="WorldEntitySpawner112" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-611, 1521)
+
+[node name="WorldEntitySpawner113" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-231, 1506)
+
+[node name="WorldEntitySpawner114" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(297, 819)
+
+[node name="WorldEntitySpawner115" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-98, 185)
+
+[node name="WorldEntitySpawner116" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-1009, 743)
+
+[node name="WorldEntitySpawner117" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-656, 830)
+
+[node name="WorldEntitySpawner118" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-1024, 1172)
+
+[node name="WorldEntitySpawner119" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-272, 1320)
+
+[node name="WorldEntitySpawner120" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(-477, 1358)
+
+[node name="WorldEntitySpawner121" parent="Gameplay/scenery/entity_spawners" instance=ExtResource("10_6wevv")]
+position = Vector2(108, 162)
 
 [editable path="Gameplay/Path2D/Player"]
