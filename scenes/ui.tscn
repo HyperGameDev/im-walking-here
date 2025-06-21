@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://cunrypxt2sd2t"]
+
+[ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="1_nt7q6"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Container_Left" type="MarginContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 210.0
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 30
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Container_Left"]
+layout_mode = 2
+split_offset = 345
+
+[node name="Button_Pause" type="Button" parent="Container_Left/VSplitContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 36
+text = "||"
+
+[node name="VBox_Top_UI" type="VBoxContainer" parent="Container_Left/VSplitContainer"]
+layout_mode = 2
+
+[node name="Label_Happiness2" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 27
+text = "Happiness"
+
+[node name="Progress_Happiness" type="ProgressBar" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+value = 28.87
+
+[node name="HSeparator" type="HSeparator" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+
+[node name="Label_Score_Text" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 27
+text = "SCORE:"
+
+[node name="Label_Score_Value" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 42
+text = "200000"
+
+[node name="Container_Right" type="MarginContainer" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -204.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBox_Bottom_UI" type="VBoxContainer" parent="Container_Right"]
+layout_mode = 2
+alignment = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Container_Right/VBox_Bottom_UI"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+
+[node name="Label_Time_Text" type="Label" parent="Container_Right/VBox_Bottom_UI"]
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 27
+text = "TIME LEFT:"
+
+[node name="Label_Time_Value" type="Label" parent="Container_Right/VBox_Bottom_UI"]
+layout_mode = 2
+theme = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 42
+text = "2:30"
