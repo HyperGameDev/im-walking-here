@@ -48,32 +48,61 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 184.0
 grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 30
 
-[node name="Button" type="Button" parent="Gameplay/UI/Container_Left"]
+[node name="Button_Pause" type="Button" parent="Gameplay/UI/Container_Left"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("6_e1cbu")
+theme_override_font_sizes/font_size = 36
+text = "||"
 
 [node name="Container_Right" type="MarginContainer" parent="Gameplay/UI"]
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -314.0
+offset_left = -255.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/margin_top = 100
+size_flags_horizontal = 4
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Gameplay/UI/Container_Right"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+[node name="Label_Happiness2" type="Label" parent="Gameplay/UI/Container_Right/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("6_e1cbu")
+theme_override_font_sizes/font_size = 27
 text = "Happiness"
 
-[node name="ProgressBar" type="ProgressBar" parent="Gameplay/UI/Container_Right/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
+[node name="Progress_Happiness" type="ProgressBar" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme = ExtResource("6_e1cbu")
-value = 23.32
+value = 28.87
+
+[node name="HSeparator" type="HSeparator" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = ExtResource("6_e1cbu")
+
+[node name="Label_Score_Text" type="Label" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_e1cbu")
+theme_override_font_sizes/font_size = 27
+text = "SCORE:"
+
+[node name="Label_Score_Value" type="Label" parent="Gameplay/UI/Container_Right/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_e1cbu")
+theme_override_font_sizes/font_size = 42
+text = "200000"
 
 [editable path="Gameplay/Path2D/Player"]
