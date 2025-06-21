@@ -24,3 +24,5 @@ func finish_round() -> void:
 	if score > SaveGame.Highscore:
 		SaveGame.Highscore = score
 		SaveGame.save_game()
+		
+	Main_Menu.ref.label_footer.text = "HIGH SCORE: " + str(SaveGame.Highscore)

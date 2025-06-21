@@ -7,10 +7,14 @@ signal update_menu_state
 var menu_state: menu_states
 enum menu_states {MAIN_MENU,GAME_OVER,PAUSE,PRE_GAMEPLAY,GAMEPLAY}
 
+@onready var menu_bg: Node2D = %Menu_BG
+@onready var label_footer: Label = %Label_Footer
+
 @onready var button_play: Button = %Button_Play
 @onready var button_settings: Button = %Button_Settings
 @onready var button_continue: Button = %Button_Continue
 @onready var button_replay: Button = %Button_Replay
+@onready var player: AnimatedSprite2D = %Player
 
 
 @onready var label_header: Label = %Label_Header
@@ -28,6 +32,8 @@ func _ready() -> void:
 	button_settings.pressed.connect(_on_settings_pressed)
 	update_menu_state.connect(_on_update_menu_state)
 	update_menu_state.emit(menu_states.MAIN_MENU)
+	
+	Main_Menu.ref.label_footer.text = "HIGH SCORE: " + str(SaveGame.Highscore)
 	
 func _on_replay_pressed() -> void:
 	GameManager.restart_game()
@@ -59,6 +65,8 @@ func _on_update_menu_state(state:menu_states) -> void:
 			gameplay.visible = true
 			visible = false
 		menu_states.MAIN_MENU:
+			player.visible = true
+			menu_bg.visible = true
 			button_play.visible = true
 			button_continue.visible = false
 			button_settings.visible = true
@@ -70,18 +78,24 @@ func _on_update_menu_state(state:menu_states) -> void:
 			AudioManager.play_menu()
 			get_tree().call_group("spawners", "cleanup")
 		menu_states.GAME_OVER:
+			player.visible = false
+			menu_bg.visible = false
 			button_play.visible = false
 			button_continue.visible = false
 			button_settings.visible = false
 			button_replay.visible = true
 			
-			visible = true
+			
 			label_header.text = "WALK OVER"
 			GameManager.finish_round()
 			get_tree().call_group("spawners", "cleanup")
 			if Player.ref != null:
 				Player.ref.idle_state()
+				
+			visible = true
 		menu_states.PAUSE:
+			player.visible = true
+			menu_bg.visible = false
 			button_play.visible = false
 			button_continue.visible = true
 			button_settings.visible = true

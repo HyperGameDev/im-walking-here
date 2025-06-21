@@ -2,7 +2,7 @@ class_name Path extends Path2D
 
 static var ref: Path2D
 
-var round_length: float = 180.:
+var round_length: float = 30.:
 	set(value):
 		round_length = value
 		UI.ref.update_score()
@@ -24,3 +24,8 @@ func begin_walking() -> void:
 	var tween: Tween = create_tween()
 	tween.parallel().tween_property(player,"progress_ratio",1.0,round_length)
 	tween.parallel().tween_property(self,"round_length",0.,round_length)
+	
+	tween.finished.connect(_on_path_tween_finished)
+	
+func _on_path_tween_finished() -> void:
+	Main_Menu.ref.update_menu_state.emit(Main_Menu.ref.menu_states.GAME_OVER)
