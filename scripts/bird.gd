@@ -9,16 +9,21 @@ func TimerCount(InDelta: float) -> void:
 		time -= InDelta
 	else:
 		time = TimerMax
-		make_bird_noise()
+		if visible == true:
+			make_bird_noise()
 
 func _process(delta: float) -> void:
 	TimerCount(delta)
 	
 
 func make_bird_noise() -> void:
+	
 	var i : int = randi_range(0,1)
 	if i == 0:
 		AudioManager.play_bird(global_position)
 	else:
 		AudioManager.play_discord()
-	UI.ref.reduce_happiness(5)
+	var score_cost : float = 300
+	score_cost /= global_position.distance_to(Player.ref.global_position)
+	score_cost*=10
+	UI.ref.reduce_happiness(score_cost)

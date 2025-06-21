@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ecxuha2tkbi6"]
+[gd_scene load_steps=8 format=3 uid="uid://ecxuha2tkbi6"]
 
 [ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="1_ite1r"]
 [ext_resource type="PackedScene" uid="uid://by7am8a6v1s1x" path="res://assets/animated_sprite_sheets/bird.tscn" id="2_7g0a2"]
+[ext_resource type="PackedScene" uid="uid://y00l5v2x6wma" path="res://scenes/components/delay_hostile.tscn" id="2_ru0jg"]
 [ext_resource type="Texture2D" uid="uid://b7i40cgy7f4xg" path="res://assets/2dart/Environment/cloud.png" id="3_s01pk"]
 [ext_resource type="PackedScene" uid="uid://cuta76g68jmdb" path="res://scenes/components/on_screen_item.tscn" id="4_ru0jg"]
 [ext_resource type="PackedScene" uid="uid://cumfy0jt13tb5" path="res://scenes/components/clickable.tscn" id="5_v1ts5"]
@@ -11,6 +12,9 @@
 script = ExtResource("1_ite1r")
 metadata/_custom_type_script = "uid://d063dsd86jl6b"
 
+[node name="DelayHostile" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_ru0jg")]
+parent = NodePath("..")
+
 [node name="Bird" parent="." instance=ExtResource("2_7g0a2")]
 position = Vector2(107, -199)
 autoplay = "default"
@@ -19,8 +23,8 @@ autoplay = "default"
 texture = ExtResource("3_s01pk")
 
 [node name="OnScreenItem" parent="." instance=ExtResource("4_ru0jg")]
-position = Vector2(104, -196)
-scale = Vector2(19.2, 19.5)
+position = Vector2(99.5, -202)
+scale = Vector2(13.65, 14.2)
 enable_node_path = NodePath("../Cloud")
 
 [node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("5_v1ts5")]

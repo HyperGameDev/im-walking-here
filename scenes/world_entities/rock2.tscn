@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://j238evkbg6mi"]
+[gd_scene load_steps=7 format=3 uid="uid://j238evkbg6mi"]
 
 [ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="1_3ntki"]
 [ext_resource type="Texture2D" uid="uid://bqhc6np2qq7sp" path="res://assets/2dart/Environment/rock.png" id="2_0kan5"]
 [ext_resource type="PackedScene" uid="uid://by7am8a6v1s1x" path="res://assets/animated_sprite_sheets/bird.tscn" id="3_4ickw"]
 [ext_resource type="PackedScene" uid="uid://cuta76g68jmdb" path="res://scenes/components/on_screen_item.tscn" id="4_4n1rc"]
 [ext_resource type="PackedScene" uid="uid://cumfy0jt13tb5" path="res://scenes/components/clickable.tscn" id="5_3apk0"]
+[ext_resource type="PackedScene" uid="uid://y00l5v2x6wma" path="res://scenes/components/delay_hostile.tscn" id="6_4n1rc"]
 
 [node name="Rock2" type="Node2D"]
 script = ExtResource("1_3ntki")
@@ -18,8 +19,8 @@ texture = ExtResource("2_0kan5")
 offset = Vector2(0, -225)
 
 [node name="OnScreenItem" parent="." instance=ExtResource("4_4n1rc")]
-position = Vector2(139, -468.5)
-scale = Vector2(15.7, 18.45)
+position = Vector2(143, -474.5)
+scale = Vector2(11.2, 13.35)
 
 [node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("5_3apk0")]
 z_index = 5
@@ -27,4 +28,7 @@ offset_left = -36.0
 offset_top = -701.0
 offset_right = 313.0
 offset_bottom = -281.0
+parent = NodePath("..")
+
+[node name="DelayHostile" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("6_4n1rc")]
 parent = NodePath("..")

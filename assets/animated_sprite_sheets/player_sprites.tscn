@@ -177,6 +177,6 @@ animations = [{
 
 [node name="Player" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_784si")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
 script = ExtResource("41_m2s7j")
