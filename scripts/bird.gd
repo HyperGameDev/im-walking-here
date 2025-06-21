@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 class_name Bird
 
-var TimerMax : float = randf_range(3,7)
+var TimerMax : float = randf_range(2,5)
 var time : float = TimerMax
 
 func TimerCount(InDelta: float) -> void:
