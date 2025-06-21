@@ -18,7 +18,9 @@ theme_override_constants/margin_top = 30
 [node name="VSplitContainer" type="VSplitContainer" parent="Container_Left"]
 layout_mode = 2
 mouse_filter = 2
-split_offset = 345
+theme = ExtResource("1_nt7q6")
+split_offset = 520
+dragging_enabled = false
 
 [node name="Button_Pause" type="Button" parent="Container_Left/VSplitContainer"]
 unique_name_in_owner = true
@@ -26,7 +28,6 @@ custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 36
 text = "||"

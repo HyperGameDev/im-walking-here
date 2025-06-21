@@ -13,6 +13,8 @@ var score_mult : float = 10.
 		
 func restart_game() -> void:
 	reset_vals()
+	
+	get_tree().change_scene_to_file("res://scenes/main_scene.tscn")
 
 func reset_vals() -> void:
 	score = 0

@@ -5,9 +5,16 @@ static var ref: UI
 @onready var progress_happiness: ProgressBar = %Progress_Happiness
 @onready var label_score: Label = %Label_Score_Value
 @onready var label_time: Label = %Label_Time_Value
+@onready var button_pause: Button = %Button_Pause
 
 func _init() -> void:
 	ref = self
+	
+func _ready() -> void:
+	button_pause.pressed.connect(_on_pause_pressed)
+	
+func _on_pause_pressed() -> void:
+	Main_Menu.ref.update_menu_state.emit(Main_Menu.ref.menu_states.PAUSE)
 
 func _process(delta: float) -> void:
 	label_score.text = str(GameManager.score)
@@ -19,6 +26,7 @@ func _process(delta: float) -> void:
 	else:
 		GameManager.finish_round()
 		#
+		
 func reduce_happiness(amount:float) -> void:
 	progress_happiness.value -= amount
 		

@@ -16,7 +16,7 @@ func _ready() -> void:
 	Main_Menu.ref.update_menu_state.connect(_on_update_menu_state)
 	
 func _on_update_menu_state(state) -> void:
-	if state == Main_Menu.ref.menu_states.GAMEPLAY:
+	if state == Main_Menu.ref.menu_states.PRE_GAMEPLAY:
 		begin_walking()
 		
 func begin_walking() -> void:

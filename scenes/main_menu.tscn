@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx0jwniwoa425"]
+[gd_scene load_steps=7 format=3 uid="uid://bx0jwniwoa425"]
 
 [ext_resource type="Script" uid="uid://dll71u2naug44" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://cwj4d3gf6i1jt" path="res://scenes/menu_addon/audio_bars.tscn" id="3_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://xjp3chnbhys2" path="res://assets/animated_sprite_sheets/player_sprites.tscn" id="4_wu84c"]
 
 [sub_resource type="Gradient" id="Gradient_ekxnf"]
 offsets = PackedFloat32Array(0)
@@ -56,13 +57,14 @@ size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
 text = "PLAY"
 
-[node name="Button_Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Button_Continue" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
-text = "SETTINGS"
+text = "Continue"
 
 [node name="Button_Replay" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -71,7 +73,15 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_l6cm7")
-text = "REPLAY"
+text = "RESTART"
+
+[node name="Button_Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_l6cm7")
+text = "SETTINGS"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
@@ -87,12 +97,17 @@ horizontal_alignment = 1
 
 [node name="settings_panel" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 40.0
-grow_vertical = 0
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -436.0
+offset_top = -70.0
+offset_bottom = 71.0
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
@@ -137,3 +152,6 @@ horizontal_alignment = 1
 [node name="AudioBars3" parent="settings_panel/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
 audioBus = "Music"
+
+[node name="Player" parent="." instance=ExtResource("4_wu84c")]
+position = Vector2(288, 656)
