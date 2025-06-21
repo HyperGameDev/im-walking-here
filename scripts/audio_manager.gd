@@ -13,10 +13,12 @@ func _ready() -> void:
 
 func play_menu() -> void:
 	menu_song.play()
+	game_song.stop()
 
 
 func play_game() -> void:
 	game_song.play()
+	menu_song.stop()
 
 
 func play_bird(pos : Vector2) -> void:
