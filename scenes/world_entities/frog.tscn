@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dgdmddfudaxmb" path="res://sound/frog_quak-81741.mp3" id="4_5snbi"]
 
 [node name="Frog" type="Node2D"]
+z_index = -5
 script = ExtResource("1_kaufb")
 
 [node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("2_5snbi")]
