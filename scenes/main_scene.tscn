@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjhaandonxj4g"]
+[gd_scene load_steps=13 format=3 uid="uid://cjhaandonxj4g"]
 
 [ext_resource type="PackedScene" uid="uid://bx0jwniwoa425" path="res://scenes/main_menu.tscn" id="1_rt2n2"]
 [ext_resource type="PackedScene" uid="uid://cmkmqncwn84vr" path="res://assets/animated_sprite_sheets/lake.tscn" id="2_18nlu"]
@@ -6,13 +6,24 @@
 [ext_resource type="Script" uid="uid://cbyksxwupl0i2" path="res://scripts/path.gd" id="3_18nlu"]
 [ext_resource type="PackedScene" uid="uid://cbmdcsvb41xin" path="res://scenes/player.tscn" id="4_c1pb6"]
 [ext_resource type="PackedScene" uid="uid://tffjypp2p2p" path="res://scenes/world_entities/tree_2.tscn" id="5_6wevv"]
-[ext_resource type="PackedScene" uid="uid://cunrypxt2sd2t" path="res://scenes/ui.tscn" id="7_c16ls"]
+[ext_resource type="Texture2D" uid="uid://c2iwbbogguqq4" path="res://assets/2dart/Environment/path.png" id="7_c1pb6"]
+[ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="7_c16ls"]
+[ext_resource type="Texture2D" uid="uid://drwho6nbp0avu" path="res://assets/2dart/Environment/grass_tile.png" id="8_18nlu"]
 
 [sub_resource type="Curve2D" id="Curve2D_0e48y"]
 _data = {
 "points": PackedVector2Array(27.3131, 125.508, -27.3131, -125.508, -360, -252, -41.8342, 121.069, 41.8342, -121.069, -280, -644, -188.412, 86.404, 188.412, -86.404, -8, -1012, -248.221, -11.4125, 248.221, 11.4125, 1768, -1132, -319.549, -128.39, 319.549, 128.39, 3088, -916, -11.4125, -402.29, 11.4125, 402.29, 3528, -4, 276.752, -219.69, -276.752, 219.69, 2904, 852, 559.211, -19.9718, -559.211, 19.9718, 1904, 1212, 326.934, 198.093, -326.934, -198.093, 328, 916, 40.6919, 80.5031, -40.6919, -80.5031, -296, -60, 1.50263, 0.751315, -1.50263, -0.751315, -360, -252)
 }
 point_count = 11
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1pb6"]
+texture = ExtResource("8_18nlu")
+texture_region_size = Vector2i(435, 435)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c16ls"]
+tile_size = Vector2i(435, 435)
+sources/0 = SubResource("TileSetAtlasSource_c1pb6")
 
 [node name="Main_Scene" type="Node2D"]
 
@@ -21,11 +32,6 @@ layer = 100
 visible = false
 
 [node name="Gameplay" type="Node2D" parent="."]
-
-[node name="Lake" parent="Gameplay" instance=ExtResource("2_18nlu")]
-position = Vector2(1888, 183)
-scale = Vector2(2.73802, 2.73802)
-autoplay = "default"
 
 [node name="LyzTemp2" type="Node2D" parent="Gameplay"]
 visible = false
@@ -45,9 +51,29 @@ script = ExtResource("3_18nlu")
 position = Vector2(-360, -252)
 rotation = -1.78508
 
-[node name="Tree2" parent="Gameplay" instance=ExtResource("5_6wevv")]
-position = Vector2(116, 652)
-
 [node name="UI" parent="Gameplay" instance=ExtResource("7_c16ls")]
+
+[node name="scenery" type="Node2D" parent="Gameplay"]
+
+[node name="grass_tiles" type="TileMap" parent="Gameplay/scenery"]
+z_index = -50
+tile_set = SubResource("TileSet_c16ls")
+format = 2
+layer_0/tile_data = PackedInt32Array(-262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 393215, 0, 0, 327679, 0, 0, 262143, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, -1, 0, 0, -65537, 0, 0, -131073, 0, 0, -196609, 0, 0, -262145, 0, 0, -327681, 0, 0, -393217, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, 458750, 0, 0, -131075, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -65539, 0, 0, -65540, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -196599, 0, 0, -196598, 0, 0, -196597, 0, 0, -196596, 0, 0, -131060, 0, 0, -131061, 0, 0, -65525, 0, 0, -65526, 0, 0, -65527, 0, 0, -65528, 0, 0, -65529, 0, 0, -65530, 0, 0, -65531, 0, 0, -65532, 0, 0, -65533, 0, 0, -65534, 0, 0, -65535, 0, 0, -3, 0, 0, -4, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 10, 0, 0, 9, 0, 0, 8, 0, 0, 7, 0, 0, 65533, 0, 0, 65532, 0, 0, 131069, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 131083, 0, 0, 131082, 0, 0, 131081, 0, 0, 131080, 0, 0, 131079, 0, 0, 131078, 0, 0, 131077, 0, 0, 131076, 0, 0, 131075, 0, 0, 131074, 0, 0, 131073, 0, 0, 196605, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262152, 0, 0, 262151, 0, 0, 262150, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 262146, 0, 0, 262145, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 131084, 0, 0, 11, 0, 0, 196617, 0, 0, 65548, 0, 0, 12, 0, 0, -65524, 0, 0, -262134, 0, 0, -262135, 0, 0, -262136, 0, 0, -262137, 0, 0, -262138, 0, 0, -262139, 0, 0, -262140, 0, 0, -262141, 0, 0, -262142, 0, 0, -262143, 0, 0, -262133, 0, 0, -262132, 0, 0, -262131, 0, 0, -196595, 0, 0, -131059, 0, 0, 262156, 0, 0, 327690, 0, 0, 327689, 0, 0, 327688, 0, 0, 327687, 0, 0, 327686, 0, 0, 327685, 0, 0, 327684, 0, 0, 327683, 0, 0, 327682, 0, 0, 327681, 0, 0, 327677, 0, 0, 327676, 0, 0, 262140, 0, 0, 262141, 0, 0, 393213, 0, 0, 458751, 0, 0, 393227, 0, 0, 393228, 0, 0, 393226, 0, 0, 393225, 0, 0, 393224, 0, 0, 393223, 0, 0, 393222, 0, 0, 393221, 0, 0, 393220, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 327691, 0, 0, 327692, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -327674, 0, 0, -327668, 0, 0, -327669, 0, 0, -327670, 0, 0, -327671, 0, 0, -327672, 0, 0, -327673, 0, 0)
+
+[node name="Lake" parent="Gameplay/scenery" instance=ExtResource("2_18nlu")]
+z_index = -5
+position = Vector2(1925.5, 219.5)
+scale = Vector2(2.1589, 2.29873)
+autoplay = "default"
+frame_progress = 0.0
+
+[node name="Path" type="Sprite2D" parent="Gameplay/scenery"]
+position = Vector2(1509, 15)
+scale = Vector2(2.1589, 2.29873)
+texture = ExtResource("7_c1pb6")
+
+[node name="Tree2" parent="Gameplay/scenery" instance=ExtResource("5_6wevv")]
+position = Vector2(-407, -390)
 
 [editable path="Gameplay/Path2D/Player"]
