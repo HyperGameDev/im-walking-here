@@ -13,11 +13,11 @@ func _ready() -> void:
 
 func play_menu() -> void:
 	menu_song.play()
-	pass
+
 
 func play_game() -> void:
 	game_song.play()
-	pass
+
 
 func play_bird(pos : Vector2) -> void:
 	var birdNoise : AudioStreamPlayer2D = bird.get_children().pick_random()

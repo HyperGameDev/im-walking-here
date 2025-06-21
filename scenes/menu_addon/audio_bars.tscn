@@ -7,3 +7,5 @@ custom_minimum_size = Vector2(50, 0)
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_oj3n3")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
