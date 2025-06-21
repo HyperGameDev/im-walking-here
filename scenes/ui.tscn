@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cunrypxt2sd2t"]
+[gd_scene load_steps=3 format=3 uid="uid://cunrypxt2sd2t"]
 
 [ext_resource type="Theme" uid="uid://dfirkxaumd5y0" path="res://ui/ui_theme_1.tres" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://bo8nrrqw2vxtt" path="res://scripts/ui.gd" id="1_x4jx1"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_x4jx1")
 
 [node name="Container_Left" type="MarginContainer" parent="."]
 anchors_preset = 9
@@ -29,13 +31,15 @@ text = "||"
 [node name="VBox_Top_UI" type="VBoxContainer" parent="Container_Left/VSplitContainer"]
 layout_mode = 2
 
-[node name="Label_Happiness2" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="Label_Happiness" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 27
 text = "Happiness"
 
 [node name="Progress_Happiness" type="ProgressBar" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+unique_name_in_owner = true
+process_mode = 4
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
@@ -53,6 +57,8 @@ theme_override_font_sizes/font_size = 27
 text = "SCORE:"
 
 [node name="Label_Score_Value" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+unique_name_in_owner = true
+process_mode = 4
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 42
@@ -86,6 +92,8 @@ theme_override_font_sizes/font_size = 27
 text = "TIME LEFT:"
 
 [node name="Label_Time_Value" type="Label" parent="Container_Right/VBox_Bottom_UI"]
+unique_name_in_owner = true
+process_mode = 4
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 42

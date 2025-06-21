@@ -12,11 +12,15 @@ func _ready() -> void:
 
 
 func play_menu() -> void:
+	if OS.is_debug_build():
+		return
 	menu_song.play()
 	game_song.stop()
 
 
 func play_game() -> void:
+	if OS.is_debug_build():
+		return
 	game_song.play()
 	menu_song.stop()
 
