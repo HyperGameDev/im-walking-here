@@ -41,82 +41,122 @@ stream = ExtResource("2_2y5yn")
 
 [node name="bird_noise" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("2_2y2jw")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise2" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("3_2y5yn")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise3" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("4_oucy0")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise4" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("5_cuol6")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise5" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("6_m1k83")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise6" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("7_oummu")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise7" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("8_hssp1")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise8" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("9_8b11i")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise9" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("10_u6qdm")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise10" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("11_f6jxr")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise11" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("12_ovaav")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise12" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("13_thanh")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="bird_noise13" type="AudioStreamPlayer2D" parent="bird"]
 stream = ExtResource("14_nplbh")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Sfx"
 
 [node name="discord" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("16_u6qdm")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("17_f6jxr")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("18_ovaav")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("19_thanh")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("20_nplbh")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("21_24ib7")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"
 
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="discord"]
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer2D" parent="discord"]
 stream = ExtResource("22_kr8a2")
+max_distance = 1000.0
+attenuation = 0.5
 bus = &"Music"

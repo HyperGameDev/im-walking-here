@@ -33,8 +33,10 @@ func play_bird(pos : Vector2) -> void:
 	(birdNoise as AudioStreamPlayer2D).play()
 
 
-func play_discord() -> void:
+func play_discord(pos : Vector2) -> void:
 	if OS.is_debug_build():
 		return
-	var discordNoise : AudioStreamPlayer = discord.get_children().pick_random()
-	discordNoise.play()
+
+	var discordNoise : AudioStreamPlayer2D = discord.get_children().pick_random()
+	discordNoise.global_position = pos
+	(discordNoise as AudioStreamPlayer2D).play()

@@ -22,7 +22,7 @@ func make_bird_noise() -> void:
 	if i == 0:
 		AudioManager.play_bird(global_position)
 	else:
-		AudioManager.play_discord()
+		AudioManager.play_discord(global_position)
 	var score_cost : float = 300
 	score_cost /= global_position.distance_to(Player.ref.global_position)
 	score_cost*=10
