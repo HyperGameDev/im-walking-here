@@ -62,6 +62,8 @@ func _on_update_menu_state(state:menu_states) -> void:
 			AudioManager.play_game()
 			get_tree().call_group("spawners", "start_round")
 		menu_states.GAMEPLAY:
+			if Player.ref != null:
+				Player.ref.walk_state()
 			gameplay.visible = true
 			visible = false
 		menu_states.MAIN_MENU:
