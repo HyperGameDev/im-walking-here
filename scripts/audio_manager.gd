@@ -26,11 +26,15 @@ func play_game() -> void:
 
 
 func play_bird(pos : Vector2) -> void:
+	if OS.is_debug_build():
+		return
 	var birdNoise : AudioStreamPlayer2D = bird.get_children().pick_random()
 	birdNoise.global_position = pos
 	(birdNoise as AudioStreamPlayer2D).play()
 
 
 func play_discord() -> void:
+	if OS.is_debug_build():
+		return
 	var discordNoise : AudioStreamPlayer = discord.get_children().pick_random()
 	discordNoise.play()

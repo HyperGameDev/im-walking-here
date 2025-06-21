@@ -20,6 +20,10 @@ func _process(delta: float) -> void:
 		GameManager.finish_round()
 		
 func update_score() -> void:
+	
+	progress_happiness.value += GameManager.happiness_factor
+	
 	var new_score: int = GameManager.score + progress_happiness.value * GameManager.score_mult
 	var tween: Tween = create_tween()
 	tween.tween_property(GameManager,"score",new_score,.2)
+	

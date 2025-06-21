@@ -2,7 +2,10 @@ class_name Path extends Path2D
 
 static var ref: Path2D
 
-var round_length: float = 180.
+var round_length: float = 180.:
+	set(value):
+		round_length = value
+		UI.ref.update_score()
 
 @onready var player: PathFollow2D = $Player
 

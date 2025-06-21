@@ -1,5 +1,6 @@
 extends Node
 
+var happiness_factor : float = .1
 var score : int = 0
 var score_mult : float = 10.
 	#get:
