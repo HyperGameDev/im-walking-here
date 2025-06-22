@@ -23,8 +23,8 @@ func make_bird_noise() -> void:
 		AudioManager.play_bird(global_position)
 	else:
 		AudioManager.play_discord(global_position)
-	var score_cost : float = 300
+	var score_cost : float = GameManager.score_cost
 	score_cost /= global_position.distance_to(Player.ref.global_position)
-	score_cost*=80*Player.ref.progress_ratio
+	score_cost*=GameManager.score_cost_mult*Player.ref.progress_ratio
 	UI.ref.reduce_happiness(score_cost)
 	TimerMax = randf_range(1,2)

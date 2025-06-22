@@ -30,6 +30,9 @@ func _process(_delta: float) -> void:
 		
 func reduce_happiness(amount:float) -> void:
 	progress_happiness.value -= amount
+	
+func increase_happiness(amount:float) -> void:
+	progress_happiness.value += amount
 		
 func update_score() -> void:
 	

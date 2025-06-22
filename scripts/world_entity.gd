@@ -28,6 +28,8 @@ func _on_item_clicked() -> void:
 			if i.visible == false:
 				return
 			i.queue_free()
+			UI.ref.increase_happiness(GameManager.happiness_bonus)
+			
 	for b : Node in get_children(): 
 		if b is Button:
 			b.queue_free()
