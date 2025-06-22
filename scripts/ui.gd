@@ -16,12 +16,13 @@ func _ready() -> void:
 func _on_pause_pressed() -> void:
 	Main_Menu.ref.update_menu_state.emit(Main_Menu.ref.menu_states.PAUSE)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	label_score.text = str(GameManager.score)
 	
 	if Path.ref.round_length > 0.:
-		var minutes = int(Path.ref.round_length) / 60
-		var seconds = int(Path.ref.round_length) % 60
+		@warning_ignore("integer_division")
+		var minutes :int = int(Path.ref.round_length) / 60
+		var seconds :int = int(Path.ref.round_length) % 60
 		label_time.text = "%02d:%02d" % [minutes, seconds]
 	else:
 		GameManager.finish_round()

@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_item_clicked() -> void:
 	audio_stream_player_2d.play()
+	UI.ref.reduce_happiness(-.5)
 	
