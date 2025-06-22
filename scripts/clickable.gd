@@ -10,4 +10,5 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	item_clicked.emit()
+	
 	pass # Replace with function body.

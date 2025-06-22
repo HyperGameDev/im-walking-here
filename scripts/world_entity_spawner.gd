@@ -5,14 +5,11 @@ func _ready() -> void:
 	add_to_group("spawners")
 
 const entity_array : Array = [
-	"res://scenes/world_entities/rock1.tscn",
 	"res://scenes/world_entities/tree_1.tscn",
-	"res://scenes/world_entities/tree_2.tscn",
-	"res://scenes/world_entities/tree_1.tscn",
-	"res://scenes/world_entities/tree_2.tscn",
-	"res://scenes/world_entities/rock1.tscn",
-	"res://scenes/world_entities/rock2.tscn",
 	"res://scenes/world_entities/cloud1.tscn",
+	"res://scenes/world_entities/rock1.tscn",
+	"res://scenes/world_entities/tree_2.tscn",
+	"res://scenes/world_entities/rock2.tscn",
 	"res://scenes/world_entities/cloud2.tscn"
 	
 ]
@@ -20,7 +17,8 @@ const entity_array : Array = [
 
 
 func start_round() -> void:
-	var i : Node = load(entity_array.pick_random()).instantiate()
+	var num : int = clampi(round(randfn(2,4)), 0, entity_array.size()-1)
+	var i : Node = load(entity_array[num]).instantiate()
 	add_child(i)
 
 func cleanup() -> void:

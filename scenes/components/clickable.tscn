@@ -25,6 +25,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqnbd"]
 
 [node name="ClickableItem" type="Button"]
+z_index = 50
+z_as_relative = false
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8ekkt")
