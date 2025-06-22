@@ -28,4 +28,6 @@ func begin_walking() -> void:
 	tween.finished.connect(_on_path_tween_finished)
 	
 func _on_path_tween_finished() -> void:
+	UI.ref.stop_score = true
+	await get_tree().create_timer(.2).timeout
 	Main_Menu.ref.update_menu_state.emit(Main_Menu.ref.menu_states.GAME_OVER)
