@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d063dsd86jl6b" path="res://scripts/world_entity.gd" id="2_h7mqr"]
 [ext_resource type="PackedScene" uid="uid://by7am8a6v1s1x" path="res://assets/animated_sprite_sheets/bird.tscn" id="2_nfnnt"]
 [ext_resource type="PackedScene" uid="uid://cumfy0jt13tb5" path="res://scenes/components/clickable.tscn" id="3_h7mqr"]
-[ext_resource type="PackedScene" path="res://scenes/components/delay_hostile.tscn" id="6_exmri"]
+[ext_resource type="PackedScene" uid="uid://y00l5v2x6wma" path="res://scenes/components/delay_hostile.tscn" id="6_exmri"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nfnnt"]
 atlas = ExtResource("2_exmri")

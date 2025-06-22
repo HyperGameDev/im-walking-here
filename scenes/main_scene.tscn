@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cunrypxt2sd2t" path="res://scenes/ui.tscn" id="7_c16ls"]
 [ext_resource type="Texture2D" uid="uid://drwho6nbp0avu" path="res://assets/2dart/Environment/grass_tile.png" id="8_18nlu"]
 [ext_resource type="PackedScene" uid="uid://ceje773eeqmqy" path="res://scenes/components/world_entity_spawner.tscn" id="10_6wevv"]
-[ext_resource type="PackedScene" path="res://scenes/world_entities/frog.tscn" id="10_e1cbu"]
+[ext_resource type="PackedScene" uid="uid://dykl3xrk3tt6y" path="res://scenes/world_entities/frog.tscn" id="10_e1cbu"]
 
 [sub_resource type="Curve2D" id="Curve2D_0e48y"]
 _data = {

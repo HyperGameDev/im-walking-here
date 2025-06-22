@@ -25,7 +25,6 @@ texture = ExtResource("3_s01pk")
 [node name="OnScreenItem" parent="." instance=ExtResource("4_ru0jg")]
 position = Vector2(99.5, -202)
 scale = Vector2(13.65, 14.2)
-enable_node_path = NodePath("../Cloud")
 
 [node name="ClickableItem" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("5_v1ts5")]
 z_index = 5
