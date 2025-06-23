@@ -8,13 +8,14 @@ func _ready() -> void:
 	load_game()
 
 var Highscore : int = 0
+var Highscore_string: String = "HighScore_v2"
 
 # I'm not sure why test3 is appended in the dict first, but it doesn't really matter if we access the information correctly
 func saveData() -> Dictionary:
 	var save_dict :Dictionary= {
 		
 
-		"HighScore" = Highscore
+		Highscore_string = Highscore
 	}
 	return save_dict
 
@@ -31,7 +32,6 @@ func load_game() -> void:
 	if not FileAccess.file_exists("user://savegame.save"):
 		return
 	
-	
 	var save_data :FileAccess= FileAccess.open("user://savegame.save", FileAccess.READ)
 	
 	# while the length of the save data is longer than the length of the newly unpacked string, continue
@@ -40,5 +40,9 @@ func load_game() -> void:
 		var json : JSON= JSON.new()
 		json.parse(json_string)
 		var nodeData : Dictionary = json.get_data()
-		if Highscore <= nodeData.get("HighScore"):
-			Highscore = nodeData.get("HighScore")
+		
+		if not nodeData.has(Highscore_string):
+			return
+			
+		if Highscore <= nodeData.get(Highscore_string):
+			Highscore = nodeData.get(Highscore_string)
