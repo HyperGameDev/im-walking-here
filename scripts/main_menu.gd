@@ -18,7 +18,7 @@ enum menu_states {MAIN_MENU,GAME_OVER,PAUSE,PRE_GAMEPLAY,GAMEPLAY}
 
 
 @onready var label_header: Label = %Label_Header
-@onready var gameplay: Node2D = $"../Gameplay"
+@onready var gameplay: Node2D = %Gameplay
 @onready var settings_panel: MarginContainer = %settings_panel
 
 
@@ -51,7 +51,9 @@ func _on_settings_pressed() -> void:
 func _on_update_menu_state(state:menu_states) -> void:
 	menu_state = state
 	
-	UI.ref.visible = menu_state == menu_states.GAMEPLAY
+	#UI.ref.visible = menu_state == menu_states.GAMEPLAY
+	
+	settings_panel.visible = false
 	
 	print("MENU STATE: ",str(menu_states.keys()[menu_state]))
 	match menu_state:
@@ -74,7 +76,7 @@ func _on_update_menu_state(state:menu_states) -> void:
 			button_settings.visible = true
 			button_replay.visible = false
 			
-			gameplay.visible = false
+			gameplay.visible = true
 			label_header.text = "I'M WALKIN' HERE"
 			visible = true
 			AudioManager.play_menu()

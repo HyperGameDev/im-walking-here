@@ -6,43 +6,59 @@
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_x4jx1")
 
-[node name="Container_Left" type="MarginContainer" parent="."]
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 210.0
-grow_vertical = 2
+[node name="Container_Top" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 102.0
+grow_horizontal = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 15
 
-[node name="VSplitContainer" type="VSplitContainer" parent="Container_Left"]
-layout_mode = 2
-mouse_filter = 2
-theme = ExtResource("1_nt7q6")
-split_offset = 520
-dragging_enabled = false
-
-[node name="Button_Pause" type="Button" parent="Container_Left/VSplitContainer"]
+[node name="Button_Pause" type="Button" parent="Container_Top"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 36
-text = "||"
+theme_override_font_sizes/font_size = 60
+text = "  ||  "
 
-[node name="VBox_Top_UI" type="VBoxContainer" parent="Container_Left/VSplitContainer"]
+[node name="Container_Bottom" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Container_Bottom"]
 layout_mode = 2
 mouse_filter = 2
+theme = ExtResource("1_nt7q6")
+split_offset = 1080
+dragging_enabled = false
 
-[node name="Label_Happiness" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="VBox_Top_UI" type="VBoxContainer" parent="Container_Bottom/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="Label_Happiness" type="Label" parent="Container_Bottom/HSplitContainer/VBox_Top_UI"]
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 27
-text = "Happiness"
+theme_override_font_sizes/font_size = 42
+text = "Happiness       "
 
-[node name="Progress_Happiness" type="ProgressBar" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="Progress_Happiness" type="ProgressBar" parent="Container_Bottom/HSplitContainer/VBox_Top_UI"]
 unique_name_in_owner = true
 process_mode = 4
 custom_minimum_size = Vector2(0, 50)
@@ -52,61 +68,48 @@ theme = ExtResource("1_nt7q6")
 value = 1.0
 show_percentage = false
 
-[node name="HSeparator" type="HSeparator" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="HSeparator" type="HSeparator" parent="Container_Bottom/HSplitContainer/VBox_Top_UI"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 
-[node name="Label_Score_Text" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="Label_Score_Text" type="Label" parent="Container_Bottom/HSplitContainer/VBox_Top_UI"]
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 42
 text = "SCORE:"
 
-[node name="Label_Score_Value" type="Label" parent="Container_Left/VSplitContainer/VBox_Top_UI"]
+[node name="Label_Score_Value" type="Label" parent="Container_Bottom/HSplitContainer/VBox_Top_UI"]
 unique_name_in_owner = true
 process_mode = 4
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 77
 text = "200000"
 
-[node name="Container_Right" type="MarginContainer" parent="."]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -204.0
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_horizontal = 4
-mouse_filter = 2
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="VBox_Bottom_UI" type="VBoxContainer" parent="Container_Right"]
+[node name="VBox_Bottom_UI" type="VBoxContainer" parent="Container_Bottom/HSplitContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 8
 mouse_filter = 2
 alignment = 2
 
-[node name="HSeparator2" type="HSeparator" parent="Container_Right/VBox_Bottom_UI"]
+[node name="HSeparator2" type="HSeparator" parent="Container_Bottom/HSplitContainer/VBox_Bottom_UI"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_nt7q6")
 
-[node name="Label_Time_Text" type="Label" parent="Container_Right/VBox_Bottom_UI"]
+[node name="Label_Time_Text" type="Label" parent="Container_Bottom/HSplitContainer/VBox_Bottom_UI"]
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 42
 text = "TIME LEFT:"
 
-[node name="Label_Time_Value" type="Label" parent="Container_Right/VBox_Bottom_UI"]
+[node name="Label_Time_Value" type="Label" parent="Container_Bottom/HSplitContainer/VBox_Bottom_UI"]
 unique_name_in_owner = true
 process_mode = 4
 layout_mode = 2
 theme = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 77
 text = "2:30"

@@ -33,6 +33,7 @@ corner_radius_bottom_left = 70
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64mea"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh1b5"]
+content_margin_top = 90.0
 bg_color = Color(0, 0, 0, 1)
 corner_radius_bottom_right = 155
 
@@ -52,7 +53,8 @@ Button/styles/hover = SubResource("StyleBoxFlat_2u17x")
 Button/styles/normal = SubResource("StyleBoxFlat_64mea")
 Button/styles/pressed = SubResource("StyleBoxFlat_ha8ex")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_64mea")
-Label/constants/outline_size = 22
+Label/constants/outline_size = 30
 Label/font_sizes/font_size = 50
+ProgressBar/font_sizes/font_size = 50
 ProgressBar/styles/background = SubResource("StyleBoxFlat_gh1b5")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_csxpq")
